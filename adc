@@ -64,7 +64,7 @@ while looptrue:
         if data2 > 300:
             print(data2)
             print("line3")
-  #          line3 = 1
+            line3 = 1
     if line4 == 0:
         if data3 > 300:
             print(data3)
