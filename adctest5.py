@@ -40,42 +40,19 @@ line5 = 0
 line6 = 0
 looptrue = True
 
-while looptrue:
+
+while True:
     # the first argument to adcRead() is the reurn from adcInit()
     # the second argument is the analog pin to read A0-A7
+
     data = adcRead(adc, A0)
     data1 = adcRead(adc, A1)
     data2 = adcRead(adc, A2)
 
     data3 = adcRead(adc, A3)
     data4 = adcRead(adc, A4)
-    if line1 == 0:
-        if data >300:
-            print(data)
-            print("line1")
-            line1 = 1
-    if line2 == 0:
-        if data1 >300:
-            print(data1)
-            print("line2")
-            line2 = 1
-    if line3 == 0:
-        if data2 > 300:
-            print(data2)
-            print("line3")
-            line3 = 1
-    if line4 == 0:
-        if data3 > 300:
-            print(data3)
-            print("line4")
-            line4 = 1
-    if line5 == 0:
-        if data4 > 300:
-            print(data4)
-            print("line5")
-            line5 = 1
-    if line6 == 0:
-        if data5 > 300:
-            print(data5)
-            print("line6")
-            line6 = 1
+    data5 = adcRead(adc, A5)    
+    if data >300:
+    	print(data)
+	print("lane1")
+	lane1 = 1
