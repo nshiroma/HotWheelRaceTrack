@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # you have to include the spidev module
 import spidev
+import time
 
 # put these functions and variables  at the
 # top of your python project or in another
