@@ -54,7 +54,6 @@ last_triger_time2 =start_time
 last_triger_time3 =start_time
 last_triger_time4 =start_time
 last_triger_time5 =start_time
-last_triger_time6 =start_time
 
 while looptrue:
     # the first argument to adcRead() is the reurn from adcInit()
