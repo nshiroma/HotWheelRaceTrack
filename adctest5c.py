@@ -117,3 +117,9 @@ while looptrue:
             line6 = 1
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
+    race_time=time.time()
+    race_time_lasped = race_time-start_time
+    if race_time_lasped > 30:
+        looptrue = False
+        print("Race time out")
+
