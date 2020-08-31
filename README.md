@@ -14,19 +14,30 @@ different color but same chassis and same casting.
 
 here is the result.
 pi@HotWheels6Lanes:~ $ ./adctest5b.py
+<br>
 512
+<br>
 line3
+<br>
 692
+<br>
 line6
+<br>
 708
+<br>
 line1
+<br>
 676
+<br>
 line2
+<br>
 566
+<br>
 line5
 
-
+<br>
 order of crossing the finish lines are 
+<br>
 line 6 -> 1 > 2 > 5
 ( line 3 over sentive sensor ) 
 confirmed with the slow motion.  
