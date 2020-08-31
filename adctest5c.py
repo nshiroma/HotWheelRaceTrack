@@ -49,6 +49,12 @@ line5 = 0
 line6 = 0
 looptrue = True
 start_time = time.time()
+last_triger_time1 =start_time
+last_triger_time2 =start_time
+last_triger_time3 =start_time
+last_triger_time4 =start_time
+last_triger_time5 =start_time
+last_triger_time6 =start_time
 
 while looptrue:
     # the first argument to adcRead() is the reurn from adcInit()
@@ -62,34 +68,53 @@ while looptrue:
     data5 = adcRead(adc, A5)
     if line1 == 0:
         if data >300:
+            end_time = time.time()
             print(data)
             print("line1")
             line1 = 1
+            time_lapsed = end_time - start_time
+            time_convert(time_lapsed)
     if line2 == 0:
         if data1 >300:
+            end_time = time.time()
             print(data1)
             print("line2")
             line2 = 1
-    if line3 == 0:
-        if data2 > 300:
-            print(data2)
-            print("line3")
-            end_time = time.time()
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
-#           line3 = 1
+    if line3 == 0:
+        if data2 > 300:
+            end_time = time.time()
+            time_lapsed = end_time - start_time
+            time_lapsed_bitween_las_trigger = end_time -last_triger_time3
+            last_triger_time3 = end_time
+            time_convert(time_lapsed_bitween_las_trigger)
+            if time_lapsed_bitween_las_trigger < 0.005:
+                line3 = 1
+                print(data2)
+                print("line3")
+                time_convert(time_lapsed)
     if line4 == 0:
         if data3 > 300:
+            end_time = time.time()
             print(data3)
             print("line4")
             line4 = 1
+            time_lapsed = end_time - start_time
+            time_convert(time_lapsed)
     if line5 == 0:
         if data4 > 300:
+            end_time = time.time()
             print(data4)
             print("line5")
             line5 = 1
+            time_lapsed = end_time - start_time
+            time_convert(time_lapsed)
     if line6 == 0:
         if data5 > 300:
+            end_time = time.time()
             print(data5)
             print("line6")
             line6 = 1
+            time_lapsed = end_time - start_time
+            time_convert(time_lapsed)
