@@ -1,7 +1,9 @@
 # HotWheelRaceTrack
 python project for IOT study
 by using the IOT ( Raspberry PI ) and IR distance sensor 
-20200830 - first race.
+<br>
+<h3>20200830 - first race.</h3>
+<br>
 first race which confirm the functinality of sensors.
 one of sensor line 3 (A2) is over senstive had tendencey so need to change or cange the code to 
 compensate for the over senstive of line 3. 
