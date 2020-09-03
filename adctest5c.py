@@ -71,10 +71,11 @@ while looptrue:
             end_time = time.time()
             time_lapsed = end_time - start_time
             time_lapsed_bitween_las_trigger = end_time -last_triger_time1
+            print(time_lapsed_bitween_las_trigger)
             last_triger_time1 = end_time
 #            time_convert(time_lapsed_bitween_las_trigger)
-            if time_lapsed_bitween_las_trigger < 0.005:
-                line3 = 1
+            if time_lapsed_bitween_las_trigger < 0.05:
+                line1 = 1
                 print(data)
                 print("line1")
                 time_convert(time_lapsed)
