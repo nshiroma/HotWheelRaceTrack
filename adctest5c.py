@@ -48,13 +48,14 @@ line4 = 0
 line5 = 0
 line6 = 0
 looptrue = True
+input("Press Enter to start")
 start_time = time.time()
 last_triger_time1 =start_time
 last_triger_time2 =start_time
 last_triger_time3 =start_time
 last_triger_time4 =start_time
 last_triger_time5 =start_time
-
+last_triger_time6 =start_time
 while looptrue:
     # the first argument to adcRead() is the reurn from adcInit()
     # the second argument is the analog pin to read A0-A7
@@ -66,57 +67,77 @@ while looptrue:
     data4 = adcRead(adc, A4)
     data5 = adcRead(adc, A5)
     if line1 == 0:
-        if data >300:
-            end_time = time.time()
-            print(data)
-            print("line1")
-            line1 = 1
-            time_lapsed = end_time - start_time
-            time_convert(time_lapsed)
-    if line2 == 0:
-        if data1 >300:
-            end_time = time.time()
-            print(data1)
-            print("line2")
-            line2 = 1
-            time_lapsed = end_time - start_time
-            time_convert(time_lapsed)
-    if line3 == 0:
-        if data2 > 300:
+        if data > 300:
             end_time = time.time()
             time_lapsed = end_time - start_time
-            time_lapsed_bitween_las_trigger = end_time -last_triger_time3
-            last_triger_time3 = end_time
-            time_convert(time_lapsed_bitween_las_trigger)
+            time_lapsed_bitween_las_trigger = end_time -last_triger_time1
+            last_triger_time1 = end_time
+#            time_convert(time_lapsed_bitween_las_trigger)
             if time_lapsed_bitween_las_trigger < 0.005:
                 line3 = 1
-                print(data2)
-                print("line3")
+                print(data)
+                print("line1")
                 time_convert(time_lapsed)
-    if line4 == 0:
-        if data3 > 300:
-            end_time = time.time()
-            print(data3)
-            print("line4")
-            line4 = 1
-            time_lapsed = end_time - start_time
-            time_convert(time_lapsed)
-    if line5 == 0:
-        if data4 > 300:
-            end_time = time.time()
-            print(data4)
-            print("line5")
-            line5 = 1
-            time_lapsed = end_time - start_time
-            time_convert(time_lapsed)
-    if line6 == 0:
-        if data5 > 300:
-            end_time = time.time()
-            print(data5)
-            print("line6")
-            line6 = 1
-            time_lapsed = end_time - start_time
-            time_convert(time_lapsed)
+        if line2 == 0:
+            if data1 > 300:
+                end_time = time.time()
+                time_lapsed = end_time - start_time
+                time_lapsed_bitween_las_trigger = end_time - last_triger_time2
+                last_triger_time2 = end_time
+                # time_convert(time_lapsed_bitween_las_trigger)
+                if time_lapsed_bitween_las_trigger < 0.005:
+                    line3 = 1
+                    print(data1)
+                    print("line2")
+                    time_convert(time_lapsed)
+        if line3 == 0:
+            if data2 > 300:
+                end_time = time.time()
+                time_lapsed = end_time - start_time
+                time_lapsed_bitween_las_trigger = end_time - last_triger_time3
+                last_triger_time3 = end_time
+                #            time_convert(time_lapsed_bitween_las_trigger)
+                if time_lapsed_bitween_las_trigger < 0.005:
+                    line3 = 1
+                    print(data2)
+                    print("line3")
+                    time_convert(time_lapsed)
+        if line4 == 0:
+            if data3 > 300:
+                end_time = time.time()
+                time_lapsed = end_time - start_time
+                time_lapsed_bitween_las_trigger = end_time - last_triger_time4
+                last_triger_time4 = end_time
+                #            time_convert(time_lapsed_bitween_las_trigger)
+                if time_lapsed_bitween_las_trigger < 0.005:
+                    line4 = 1
+                    print(data3)
+                    print("line4")
+                    time_convert(time_lapsed)
+        if line5 == 0:
+            if data4 > 300:
+                end_time = time.time()
+                time_lapsed = end_time - start_time
+                time_lapsed_bitween_las_trigger = end_time - last_triger_time5
+                last_triger_time5 = end_time
+                #            time_convert(time_lapsed_bitween_las_trigger)
+                if time_lapsed_bitween_las_trigger < 0.005:
+                    line5 = 1
+                    print(data4)
+                    print("line5")
+                    time_convert(time_lapsed)
+        if line6 == 0:
+            if data5 > 300:
+                end_time = time.time()
+                time_lapsed = end_time - start_time
+                time_lapsed_bitween_las_trigger = end_time - last_triger_time6
+                last_triger_time6 = end_time
+                #            time_convert(time_lapsed_bitween_las_trigger)
+                if time_lapsed_bitween_las_trigger < 0.005:
+                    line3 = 1
+                    print(data5)
+                    print("line5")
+                    time_convert(time_lapsed)
     race_time=time.time()
     race_time_lasped = race_time-start_time
     if race_time_lasped > 30:
