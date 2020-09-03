@@ -86,7 +86,7 @@ while looptrue:
             last_triger_time2 = end_time
                 # time_convert(time_lapsed_bitween_las_trigger)
             if time_lapsed_bitween_las_trigger < 0.005:
-                line3 = 1
+                line2 = 1
                 print(data1)
                 print("line2")
                 time_convert(time_lapsed)
@@ -132,11 +132,11 @@ while looptrue:
             time_lapsed = end_time - start_time
             time_lapsed_bitween_las_trigger = end_time - last_triger_time6
             last_triger_time6 = end_time
-            #            time_convert(time_lapsed_bitween_las_trigger)
+            # time_convert(time_lapsed_bitween_las_trigger)
             if time_lapsed_bitween_las_trigger < 0.005:
-                line3 = 1
+                line6 = 1
                 print(data5)
-                print("line5")
+                print("line6")
                 time_convert(time_lapsed)
     race_time=time.time()
     race_time_lasped = race_time-start_time
