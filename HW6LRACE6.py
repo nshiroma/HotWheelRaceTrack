@@ -78,4 +78,4 @@ while looptrue:
     if race_time_lasped > 30:
         looptrue = False
         print("Race time out")
-
+# end of race if all six car reached goal line
