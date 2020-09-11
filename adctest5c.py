@@ -70,12 +70,28 @@ while looptrue:
         if data > 300:
             end_time = time.time()
             time_lapsed = end_time - start_time
+            time_lapsed_bitween_las_trigger = end_time - last_triger_time1
+            #            print(time_lapsed_bitween_las_trigger)
+            last_triger_time1 = end_time
+            #            time_convert(time_lapsed_bitween_las_trigger)
+            if time_lapsed_bitween_las_trigger < 0.005:
+                line1 = 1
+                print(data)
+                #               print(time_lapsed_bitween_las_trigger)
+                print("line1")
+                time_convert(time_lapsed)
+    if line1 == 0:
+        if data > 300:
+            end_time = time.time()
+            time_lapsed = end_time - start_time
             time_lapsed_bitween_las_trigger = end_time -last_triger_time1
+#            print(time_lapsed_bitween_las_trigger)
             last_triger_time1 = end_time
 #            time_convert(time_lapsed_bitween_las_trigger)
             if time_lapsed_bitween_las_trigger < 0.005:
-                line3 = 1
+                line1 = 1
                 print(data)
+#               print(time_lapsed_bitween_las_trigger)
                 print("line1")
                 time_convert(time_lapsed)
     if line2 == 0:
@@ -84,7 +100,7 @@ while looptrue:
             time_lapsed = end_time - start_time
             time_lapsed_bitween_las_trigger = end_time - last_triger_time2
             last_triger_time2 = end_time
-                # time_convert(time_lapsed_bitween_las_trigger)
+            # time_convert(time_lapsed_bitween_las_trigger)
             if time_lapsed_bitween_las_trigger < 0.005:
                 line2 = 1
                 print(data1)
