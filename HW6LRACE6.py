@@ -80,3 +80,6 @@ while looptrue:
         looptrue = False
         print("Race time out")
     # end of race if all six car reached goal line
+    if not any([line[1],line[2],line[3],line[4],line[5],line[6]]):
+        looptrue = False
+        print("All Hot Wheel Reach Goal")
