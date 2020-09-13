@@ -49,7 +49,7 @@ start_time = time.time()
 input("Press Enter to start")
 for x in range(1,7):
     print(x)
-    line[x] = 0
+    line[x] = True
     last_triger_time[x] = start_time
 looptrue = True
 while looptrue:
@@ -58,7 +58,7 @@ while looptrue:
     for x in range(1, 7):
         data[x] = adcRead(adc, A[x-1])
     for y in range(1,7):
-        if line[y] == 0:
+        if line[y] :
             if data[y] > 300:
                 end_time = time.time()
                 time_lapsed = end_time - start_time
@@ -67,7 +67,7 @@ while looptrue:
                 last_triger_time[y] = end_time
                 #            time_convert(time_lapsed_bitween_las_trigger)
                 if time_lapsed_bitween_las_trigger < 0.005:
-                    line[y] = 1
+                    line[y] = False
                     print(data[y])
                     #               print(time_lapsed_bitween_las_trigger)
                     linename ="LineNumber{}"
@@ -79,4 +79,5 @@ while looptrue:
     if race_time_lasped > 30:
         looptrue = False
         print("Race time out")
+    if
 # end of race if all six car reached goal line
