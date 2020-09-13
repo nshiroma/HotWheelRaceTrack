@@ -13,7 +13,8 @@ A[2]=2
 A[3]=3
 A[4]=4
 A[5]=5
-
+A[6]=5
+A[7]=5
 
 def adcInit():
     connection = spidev.SpiDev()
