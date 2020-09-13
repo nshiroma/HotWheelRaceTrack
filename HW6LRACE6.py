@@ -79,6 +79,11 @@ while looptrue:
     if race_time_lasped > 30:
         looptrue = False
         print("Race time out")
+        for y in range(1, 7):
+            if line[y]:
+                DNF ="Line number{} did not finish"
+                print(DNF.format(y))
+
     # end of race if all six car reached goal line
     if not any([line[1],line[2],line[3],line[4],line[5],line[6]]):
         looptrue = False
