@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # Slow Motion
 # For this to work you need to have MP4Box installed
 # You can do this by using:
