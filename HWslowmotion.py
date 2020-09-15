@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # Slow Motion
 # For this to work you need to have MP4Box installed
 # You can do this by using:
@@ -10,9 +11,9 @@ import time
 ######################################
 # Config data
 ######################################20200914
-m_FPS = 90
-m_resolutionX = 960
-m_resolutionY = 540
+m_FPS = 180
+m_resolutionX = 960/3
+m_resolutionY = 540/3
 
 ######################################
 
