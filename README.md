@@ -5,7 +5,7 @@ by using the IOT ( Raspberry PI ) and IR distance sensor
 <h3>20200830 - first race.</h3>
 <br>
 First race to confirm the functinality of sensors.
-one of sensor line 3 (A2) is over senstive had tendencey trigger Prematurely so need to change or cange the code to 
+one of sensor line 3 (A2) is over senstive had tendencey trigger Prematurely so need to change the sensor or change the code to 
 compensate for the over senstive of line 3. 
 
 for first race we used 4 lanes.
